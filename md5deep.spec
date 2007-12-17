@@ -7,7 +7,6 @@ License:	Public Domain
 URL:		http://md5deep.sourceforge.net/
 Source0:	http://prdownloads.sourceforge.net/md5deep/%{name}-%{version}.tar.bz2
 Patch0:		md5deep-1.12-optflags.diff
-Buildroot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
 md5deep is a cross-platform program to compute MD5 message digests
