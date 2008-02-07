@@ -1,6 +1,6 @@
 Summary:	Compute MD5 message digests on an arbitrary number of files
 Name:		md5deep
-Version:	1.12
+Version:	1.13
 Release:	%mkrel 1
 Group:		File tools
 License:	Public Domain
