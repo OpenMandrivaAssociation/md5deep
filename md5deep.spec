@@ -3,6 +3,7 @@ Name:		md5deep
 Version:	1.13
 Release:	%mkrel 1
 Group:		File tools
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 License:	Public Domain
 URL:		http://md5deep.sourceforge.net/
 Source0:	http://prdownloads.sourceforge.net/md5deep/%{name}-%{version}.tar.bz2
