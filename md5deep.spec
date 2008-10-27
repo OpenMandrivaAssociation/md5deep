@@ -1,12 +1,12 @@
 Summary:	Compute MD5 message digests on an arbitrary number of files
 Name:		md5deep
-Version:	1.13
-Release:	%mkrel 3
+Version:	3.1
+Release:	%mkrel 1
 Group:		File tools
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-License:	Public Domain
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+License:	Public Domain and GPLv2+
 URL:		http://md5deep.sourceforge.net/
-Source0:	http://prdownloads.sourceforge.net/md5deep/%{name}-%{version}.tar.bz2
+Source0:	http://prdownloads.sourceforge.net/md5deep/%{name}-%{version}.tar.gz
 Patch0:		md5deep-1.12-optflags.diff
 
 %description
@@ -32,36 +32,21 @@ features:
 %prep
 
 %setup -q -n %{name}-%{version}
-%patch0 -p0
+#patch0 -p0
 
 %build
-
+%configure2_5x
 %make
 
 %install
 [ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
-
-install -d %{buildroot}%{_bindir}
-install -d %{buildroot}%{_mandir}/man1
-
-install -m0755 md5deep %{buildroot}%{_bindir}/
-install -m0755 sha1deep %{buildroot}%{_bindir}/
-install -m0755 sha256deep %{buildroot}%{_bindir}/
-install -m0755 tigerdeep %{buildroot}%{_bindir}/
-install -m0755 whirlpooldeep %{buildroot}%{_bindir}/
- 
-install -m0644 md5deep.1 %{buildroot}%{_mandir}/man1/
+%makeinstall_std
 
 %clean
 [ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
 
 %files 
 %defattr(-,root,root)
-%doc CHANGES README
-%{_bindir}/md5deep
-%{_bindir}/sha1deep
-%{_bindir}/sha256deep
-%{_bindir}/tigerdeep
-%{_bindir}/whirlpooldeep
-%{_mandir}/man1/md5deep.1*
-
+%doc ChangeLog README
+%{_bindir}/*
+%{_mandir}/man1/*
