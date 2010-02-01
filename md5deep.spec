@@ -33,7 +33,7 @@ features:
 %setup -q -n %{name}-%{version}
 
 %build
-%configure
+%configure2_5x
 %make
 
 %install
