@@ -1,6 +1,6 @@
 Summary:	Compute MD5 message digests on an arbitrary number of files
 Name:		md5deep
-Version:	3.7
+Version:	3.9.2
 Release:	%mkrel 1
 Group:		File tools
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
@@ -29,8 +29,7 @@ features:
   those that do not match. 
 
 %prep
-
-%setup -q -n %{name}-%{version}
+%setup -q
 
 %build
 %configure2_5x
