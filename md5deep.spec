@@ -1,12 +1,11 @@
 Summary:	Compute MD5 message digests on an arbitrary number of files
 Name:		md5deep
-Version:	3.9.2
-Release:	%mkrel 1
+Version:	4.0.0
+Release:	1
 Group:		File tools
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 License:	Public Domain and GPLv2+
 URL:		http://md5deep.sourceforge.net/
-Source0:	http://prdownloads.sourceforge.net/md5deep/%{name}-%{version}.tar.gz
+Source0:	http://downloads.sourceforge.net/project/md5deep/md5deep/md5deep-4.0.0/%{name}-%{version}.tar.gz
 
 %description
 md5deep is a cross-platform program to compute MD5 message digests
@@ -36,14 +35,9 @@ features:
 %make
 
 %install
-[ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
 %makeinstall_std
 
-%clean
-[ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
-
 %files 
-%defattr(-,root,root)
 %doc ChangeLog README
 %{_bindir}/*
 %{_mandir}/man1/*
