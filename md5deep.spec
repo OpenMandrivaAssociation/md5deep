@@ -1,6 +1,6 @@
 Summary:	Compute MD5 message digests on an arbitrary number of files
 Name:		md5deep
-Version:	4.0.1
+Version:	4.1
 Release:	1
 Group:		File tools
 License:	Public Domain and GPLv2+
@@ -13,19 +13,19 @@ on an arbitrary number of files. The program is known to run on
 Windows(tm), Linux, FreeBSD, OS X, Solaris, and should run on most
 other platforms. md5deep is similar to the md5sum program found in
 the GNU Coreutils package, but has the following additional
-features: 
+features:
 
 * Recursive operation - md5deep is able to recursive examine an
   entire directory tree. That is, compute the MD5 for every file
-  in a directory andf for every file in every subdirectory. 
+  in a directory andf for every file in every subdirectory.
 
 * Time estimation - md5deep can produce a time estimate when it's
-  processing very large files. 
+  processing very large files.
 
 * Comparison mode - md5deep can accept a list of known hashes and
   compare them to a set of input files. The program can display
   either those input files that match the list of known hashes or
-  those that do not match. 
+  those that do not match.
 
 %prep
 %setup -q
@@ -37,7 +37,7 @@ features:
 %install
 %makeinstall_std
 
-%files 
+%files
 %doc ChangeLog README
 %{_bindir}/*
 %{_mandir}/man1/*
