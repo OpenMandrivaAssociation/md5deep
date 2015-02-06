@@ -1,7 +1,7 @@
 Summary:	Compute MD5 message digests on an arbitrary number of files
 Name:		md5deep
 Version:	4.1
-Release:	2
+Release:	3
 Group:		File tools
 License:	Public Domain and GPLv2+
 URL:		http://md5deep.sourceforge.net/
