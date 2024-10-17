@@ -4,7 +4,7 @@ Version:	4.1
 Release:	3
 Group:		File tools
 License:	Public Domain and GPLv2+
-URL:		http://md5deep.sourceforge.net/
+URL:		https://md5deep.sourceforge.net/
 Source0:	http://downloads.sourceforge.net/project/md5deep/md5deep/md5deep-4.0.0/%{name}-%{version}.tar.gz
 
 %description
